@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"monkey-plus/token"
+	"github.com/lxdlam/monkey-plus/token"
 	"strings"
 )
 

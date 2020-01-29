@@ -2,8 +2,8 @@ package evaluator
 
 import (
 	"fmt"
-	"monkey-plus/ast"
-	"monkey-plus/object"
+	"github.com/lxdlam/monkey-plus/ast"
+	"github.com/lxdlam/monkey-plus/object"
 )
 
 var (

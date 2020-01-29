@@ -3,12 +3,12 @@ package repl
 import (
 	"bufio"
 	"fmt"
+	"github.com/lxdlam/monkey-plus/evaluator"
+	"github.com/lxdlam/monkey-plus/lexer"
+	"github.com/lxdlam/monkey-plus/object"
+	"github.com/lxdlam/monkey-plus/parser"
 	"io"
 	"log"
-	"monkey-plus/evaluator"
-	"monkey-plus/lexer"
-	"monkey-plus/object"
-	"monkey-plus/parser"
 )
 
 const PROMPT = ">> "

@@ -3,8 +3,8 @@ package object
 import (
 	"bytes"
 	"fmt"
+	"github.com/lxdlam/monkey-plus/ast"
 	"hash/fnv"
-	"monkey-plus/ast"
 	"strings"
 )
 

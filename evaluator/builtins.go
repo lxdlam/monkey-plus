@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"github.com/lxdlam/monkey-plus/lexer"
+	"github.com/lxdlam/monkey-plus/object"
+	"github.com/lxdlam/monkey-plus/parser"
 	"io"
-	"monkey-plus/lexer"
-	"monkey-plus/object"
-	"monkey-plus/parser"
 	"os"
 	"strings"
 )

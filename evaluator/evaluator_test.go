@@ -1,9 +1,9 @@
 package evaluator
 
 import (
-	"monkey-plus/lexer"
-	"monkey-plus/object"
-	"monkey-plus/parser"
+	"github.com/lxdlam/monkey-plus/lexer"
+	"github.com/lxdlam/monkey-plus/object"
+	"github.com/lxdlam/monkey-plus/parser"
 	"testing"
 )
 

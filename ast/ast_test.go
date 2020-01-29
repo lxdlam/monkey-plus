@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"monkey-plus/token"
+	"github.com/lxdlam/monkey-plus/token"
 	"testing"
 )
 

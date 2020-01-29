@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"monkey-plus/bin"
-	"monkey-plus/evaluator"
-	"monkey-plus/repl"
+	"github.com/lxdlam/monkey-plus/bin"
+	"github.com/lxdlam/monkey-plus/evaluator"
+	"github.com/lxdlam/monkey-plus/repl"
 	"os"
 	user2 "os/user"
 )
