@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Monkey programming language is from the book series [*Writing An Interpreter In Go*](https://interpreterbook.com/) and [*Writing A Compiler In Go*](https://compilerbook.com/), the author is @mrnugget. 
+The Monkey programming language is from the book series [*Writing An Interpreter In Go*](https://interpreterbook.com/) and [*Writing A Compiler In Go*](https://compilerbook.com/), the author is Thorsten Ball([@mrnugget](https://github.com/mrnugget)). 
 
 I must say this series is the best books for the beginner of whom want to start their journey of implementing a programming language. If you are also interested in, go and grab your own copy now!
 
