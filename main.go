@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"monkey/bin"
-	"monkey/evaluator"
-	"monkey/repl"
+	"monkey-plus/bin"
+	"monkey-plus/evaluator"
+	"monkey-plus/repl"
 	"os"
 	user2 "os/user"
 )

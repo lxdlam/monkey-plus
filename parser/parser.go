@@ -2,9 +2,9 @@ package parser
 
 import (
 	"fmt"
-	"monkey/ast"
-	"monkey/lexer"
-	"monkey/token"
+	"monkey-plus/ast"
+	"monkey-plus/lexer"
+	"monkey-plus/token"
 	"strconv"
 )
 
