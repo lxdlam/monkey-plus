@@ -1,4 +1,4 @@
-name: Go
+name: Monkey+ CI
 on: [push]
 jobs:
   build:
@@ -19,8 +19,4 @@ jobs:
 
       - name: Test
         run:
-          - go test ./ast
-          - go test ./evaluator
-          - go test ./lexer
-          - go test ./object
-          - go test ./parser
+          - go test ./...

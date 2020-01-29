@@ -1,5 +1,7 @@
 # Monkey+
 
+![](https://github.com/lxdlam/monkey-plus/workflows/Monkey+%20CI/badge.svg)
+
 [The Monkey programming language](https://monkeylang.org/) implemented by Ramen.
 
 ## Overview
