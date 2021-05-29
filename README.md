@@ -2,7 +2,7 @@
 
 It's Monkey+ but with tiny modification to support UTF-8 characters in source.
 
-Also, some special token has been added. If you want to know why, go search #byby# in <https://weibo.com>.
+Also, some special token has been added. If you want to know why, go search #byby# at <https://weibo.com>.
 
 ## Sample
 ```
