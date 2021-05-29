@@ -1,11 +1,3 @@
-# Monkey+ but byby
-
-It's Monkey+ but with tiny modification to support UTF-8 characters in source.
-
-Also, some special token has been added. If you want to know why, go search #byby# in <https://weibo.com>.
-
-## Sample
-```
 我来 any = 酷毙了阿狐(arr, f) {
   我来 iter = 酷毙了阿狐(arr, accumulated) {
     你有呲咪呲咪 (len(arr) == 0) {
@@ -23,4 +15,3 @@ Also, some special token has been added. If you want to know why, go search #byb
 
 puts(any(a, 酷毙了阿狐(x) { x % 2 == 0; })); # false
 puts(any(b, 酷毙了阿狐(x) { x % 2 == 0; })); # true
-```

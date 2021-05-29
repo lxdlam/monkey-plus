@@ -62,9 +62,21 @@ var keywords = map[string]TokenType{
 	"return": RETURN,
 }
 
+var bybyKeywords = map[string]TokenType{
+	"酷毙了阿狐":     FUNCTION,
+	"我来":        LET,
+	"浙江的猪":      TRUE,
+	"好吃得很":      FALSE,
+	"你有呲咪呲咪": IF,
+	"else":          ELSE,
+	"零利息经济移动":   RETURN,
+}
+
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
+	} else if bTok, ok := bybyKeywords[ident]; ok {
+		return bTok
 	}
 	return IDENT
 }

@@ -11,14 +11,14 @@ var (
 )
 
 type Lexer struct {
-	input        string
+	input        []rune
 	position     int
 	readPosition int
-	ch           byte
+	ch           rune
 }
 
 func New(input string) *Lexer {
-	l := &Lexer{input: input}
+	l := &Lexer{input: []rune(input)}
 	l.readChar()
 	return l
 }
@@ -34,7 +34,7 @@ func (l *Lexer) readChar() {
 	l.readPosition += 1
 }
 
-func (l *Lexer) peekChar() byte {
+func (l *Lexer) peekChar() rune {
 	if l.readPosition >= len(l.input) {
 		return 0
 	} else {
@@ -152,7 +152,7 @@ func (l *Lexer) readIdentifier() string {
 		l.readChar()
 	}
 
-	return l.input[position:l.position]
+	return string(l.input[position:l.position])
 }
 
 func (l *Lexer) readNumber() string {
@@ -162,7 +162,7 @@ func (l *Lexer) readNumber() string {
 		l.readChar()
 	}
 
-	return l.input[position:l.position]
+	return string(l.input[position:l.position])
 }
 
 func (l *Lexer) skipWhitespace() {
@@ -177,15 +177,19 @@ func (l *Lexer) skipComment() {
 	}
 }
 
-func newToken(tokenType token.TokenType, ch byte) token.Token {
+func newToken(tokenType token.TokenType, ch rune) token.Token {
 	return token.Token{Type: tokenType, Literal: string(ch)}
 }
 
-func isLetter(ch byte) bool {
-	return 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
+func isLetter(ch rune) bool {
+	return isSpecialTokens(ch) || 'a' <= ch && ch <= 'z' || 'A' <= ch && ch <= 'Z' || ch == '_'
 }
 
-func isDigit(ch byte) bool {
+func isSpecialTokens(ch rune) bool {
+	return strings.Contains("的我浙来咪酷呲利狐了济息有零移你得动吃很毙好猪经江阿", string(ch))
+}
+
+func isDigit(ch rune) bool {
 	return '0' <= ch && ch <= '9'
 }
 
@@ -196,7 +200,7 @@ func (l *Lexer) readString() (string, bool) {
 		if l.ch == '\\' {
 			l.readChar()
 			if l.ch == 0 || !strings.Contains(ESCAPE_SEQUENCE, string(l.ch)) {
-				return l.input[position:l.position], false
+				return string(l.input[position:l.position]), false
 			}
 			continue
 		}
@@ -204,8 +208,8 @@ func (l *Lexer) readString() (string, bool) {
 			break
 		}
 		if l.ch == 0 {
-			return l.input[position:l.position], false
+			return string(l.input[position:l.position]), false
 		}
 	}
-	return l.input[position:l.position], true
+	return string(l.input[position:l.position]), true
 }
